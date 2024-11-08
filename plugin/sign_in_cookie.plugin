@@ -1,0 +1,24 @@
+#!name = NGA&IT之家Cookie获取
+#!desc = NGA&IT之家Cookie获取
+#!openUrl = 
+#!author = Mikukko[https://github.com/mikukko]
+#!tag =
+#!system = 
+#!system_version = 
+#!loon_version = 
+#!homepage = https://github.com/mikukko/loon_conf
+#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Panda.png
+#!date = 2024-11-08 20:00:00
+
+[Rewrite]
+
+[Script]
+# nga重写获取cookie
+http-request ^https:\/\/ngabbs.com\/nuke.php\?? script-path = https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.cookie.js, requires-body = true, tag = NGA Cookie
+
+# it之家重写获取cookie
+http-request ^https:\/\/napi\.ithome\.com\/api\/usersign\/getsigninfo? script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.cookie.js, tag = ithome Cookie
+
+[MitM]
+hostname = ngabbs.com, napi.ithome.com
+
