@@ -19,6 +19,10 @@ http-request ^https:\/\/ngabbs.com\/nuke.php\?? script-path = https://raw.github
 # it之家重写获取cookie
 http-request ^https:\/\/napi\.ithome\.com\/api\/usersign\/getsigninfo? script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.cookie.js, tag = ithome Cookie
 
+# v2extj重写获取cookie
+http-request ^https:\/\/www\.v2ex\.com\/mission\/daily script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/v2ex.cookie.js
+
+
 [MitM]
-hostname = ngabbs.com, napi.ithome.com
+hostname = ngabbs.com, napi.ithome.com, *.v2ex.com
 
